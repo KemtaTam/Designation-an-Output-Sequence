@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="style.css">
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+	<title>Document</title>
+</head>
+<body>
+	<header>Укажите входную последовательность при заданной входной</header>
+	<div class="promt">Начальное состояние: 1</div>
+
+	<form action="/" method="GET" enctype="multipart/form-data">
+
+		<div class="body_table">
+			<table>
+				<tr class="first_row">
+					<th class="first_col t_1-1">I/S</th>
+					<th>1</th>
+					<th>2</th>
+					<th>3</th>
+					<th>4</th>
+				<tr class="second_row">
+					<th class="first_col t_2-1">a</th>
+					<th>1/1</th>
+					<th>1/0</th>
+					<th>4/2</th>
+					<th>4/1</th>
+				</tr>
+				<tr class="third_row">
+					<th class="first_col t_3-1">b</th>
+					<th>2/2</th>
+					<th>3/1</th>
+					<th>1/1</th>
+					<th>4/2</th>
+				</tr>
+			</table>
+		</div>
+		<div class="sequence">
+			<div class="input_sequence">Входная последовательность: abbabb</div>
+			<div class="output_sequence">Выходная последовательность: 
+				<input class="valueOfsequence" type="text" name="output_sequence"></div>
+		</div>
+		<div class="body_end_button">
+			<button class="end_button" type="submit" title="Отправить ответ на платформу">Отправить ответ</button>
+		</div>
+	</form>
+</body>
+</html>
