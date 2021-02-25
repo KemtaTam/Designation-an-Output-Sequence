@@ -15,31 +15,41 @@
 	<form id="form" action="/" method="GET">
 		<div class="body_table">
 			<table>
-				<tr class="first_row">
-					<th class="first_col t_1-1">I/S</th>
-					<th>1</th>
-					<th>2</th>
-					<th>3</th>
-					<th>4</th>
-				<tr class="second_row">
-					<th class="first_col t_2-1">a</th>
-					<th>1/1</th>
-					<th>1/0</th>
-					<th>4/2</th>
-					<th>4/1</th>
-				</tr>
-				<tr class="third_row">
-					<th class="first_col t_3-1">b</th>
-					<th>2/2</th>
-					<th>3/1</th>
-					<th>1/1</th>
-					<th>4/2</th>
-				</tr>
+				<tbody>
+					<tr class="first_row">
+						<th class="first_col t_1-1">I/S</th>
+						<th>1</th>
+						<th>2</th>
+						<th>3</th>
+						<th>4</th>
+					</tr>
+					<tr class="second_row">
+						<th class="first_col t_2-1">a</th>
+						<th>1/1</th>
+						<th>1/2</th>
+						<th>2/3</th>
+						<th>4/4</th>
+					</tr>
+					<tr class="third_row">
+						<th class="first_col t_3-1">b</th>
+						<th>2/5</th>
+						<th>3/6</th>
+						<th>1/7</th>
+						<th>4/8</th>
+					</tr>
+					<tr class="third_row">
+						<th class="first_col t_3-1">c</th>
+						<th>2/2</th>
+						<th>3/2</th>
+						<th>1/2</th>
+						<th>1/2</th>
+					</tr>
+				</tbody>
 			</table>
 		</div>
 
 		<div class="sequence">
-			<div class="input_sequence">Входная последовательность: abbabb</div>
+			<div class="input_sequence">Входная последовательность: <strong>abbabbcc</strong></div>
 			<div class="output_sequence">Выходная последовательность: 
 				<input class="valueOfsequence" type="text" name="output_sequence"></div>
 		</div>
