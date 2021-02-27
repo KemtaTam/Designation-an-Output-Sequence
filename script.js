@@ -1,6 +1,7 @@
 const form = document.getElementById("form");
 let inputSeq = document.getElementsByTagName("strong")[0];
 let tbody = document.getElementsByTagName("tbody")[0];
+let input_sequence = document.getElementsByTagName("myTag")[0];
 
 //Объект, включающий в себя последовательности
 let CollOfIputSeq = {};
@@ -38,9 +39,14 @@ function retrieveFormValue(event) {
 
 	if (valOfseq.value == answer) {
 		alert("Correct answer");
+
 		numOfseq++; //при правильном ответе идет другая последовательность
 		inputSeq.textContent = CollOfIputSeq[numOfseq];
 		inputSeqVal = inputSeq.innerHTML;
+
+		let seqLeft = numOfEl-numOfseq;
+		input_sequence.textContent = "Входная последовательность " + "(осталось " + seqLeft + "): ";
+
 		if (numOfseq == numOfEl) alert("GOOOOOD!!!!");	//Если все ответы правильны
 	}
 	else if (checkForm(form)) alert("Incorrect answer! Try it again.");
