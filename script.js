@@ -46,6 +46,9 @@ function retrieveFormValue(event) {
 
 		let seqLeft = numOfEl-numOfseq;
 		input_sequence.textContent = "Входная последовательность " + "(осталось " + seqLeft + "): ";
+		
+		let valInputSeq = document.getElementsByClassName("valueOfsequence")[0];
+		valInputSeq.value = "";
 
 		if (numOfseq == numOfEl) alert("GOOOOOD!!!!");	//Если все ответы правильны
 	}
