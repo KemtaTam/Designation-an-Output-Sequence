@@ -1,7 +1,7 @@
 const form = document.getElementById("form");
 let inputSeq = document.getElementsByTagName("strong")[0];
 let tbody = document.getElementsByTagName("tbody")[0];
-let input_sequence = document.getElementsByTagName("myTag")[0];
+let input_sequence = document.getElementsByTagName("span")[0];
 
 //Объект, включающий в себя последовательности
 let CollOfIputSeq = {};
