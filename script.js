@@ -24,6 +24,9 @@ for(let i=0; i<numOfEl; i++)
 	console.log(buildAnswer(CollOfIputSeq[i]));
 }
 
+//показывает сколько всего будет последовательностей
+input_sequence.textContent = "Входная последовательность " + "(осталось " + numOfEl + "): ";
+
 //при нажатии на кнопку отправить ответ
 function retrieveFormValue(event) {
 	event.preventDefault(); //отправлять на сервер не нужно
@@ -44,8 +47,14 @@ function retrieveFormValue(event) {
 		inputSeq.textContent = CollOfIputSeq[numOfseq];
 		inputSeqVal = inputSeq.innerHTML;
 
+		//количество элементов - номер последовательности
+		
 		let seqLeft = numOfEl-numOfseq;
-		input_sequence.textContent = "Входная последовательность " + "(осталось " + seqLeft + "): ";
+		if(seqLeft>0){
+			input_sequence.textContent = "Входная последовательность " + "(осталось " + seqLeft + "): ";
+		} else{
+			input_sequence.textContent = "Входная последовательность: ";
+		}
 
 		let valInputSeq = document.getElementsByClassName("valueOfsequence")[0];
 		valInputSeq.value = "";
