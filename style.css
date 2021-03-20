@@ -125,20 +125,20 @@ th{
 	font-size: 16.5px;
 }
 
-.next_sim{
-	display: flex;
-	justify-content: center;
-	margin-top: 30px;
-	font-family: Arial, Helvetica, sans-serif;
-	font-size: 12px;
+.left_arrow{
+	position: fixed;
+	width: 3%;
+	left: 1%;
+	top: 45%;
+	cursor: pointer;
+	transform: rotate(180deg);
 }
-.links{
-	display: flex;
-	justify-content: center;
-	margin-top: 5px;
+.left_arrow:hover{
+	background-color: rgba(203, 236, 236, 0.74);
+	transition: 0.2s;
 }
-.link{padding: 10px;}
-#l1{background-color: rgba(0, 128, 0, 0.616);}
-#l2{background-color: rgba(128, 119, 0, 0.616);}
-#l3{background-color: rgba(0, 128, 117, 0.616);}
-#l4{background-color: rgba(128, 0, 32, 0.616);}
+@media screen and (max-width: 575px){
+	.left_arrow{
+		display: none;
+	}
+}
