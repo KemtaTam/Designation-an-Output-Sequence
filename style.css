@@ -129,24 +129,6 @@ th{
 	font-size: 16.5px;
 }
 
-.left_arrow{
-	position: fixed;
-	width: 3%;
-	left: 1%;
-	top: 45%;
-	cursor: pointer;
-	transform: rotate(180deg);
-}
-.left_arrow:hover{
-	background-color: rgba(203, 236, 236, 0.74);
-	transition: 0.2s;
-}
-@media screen and (max-width: 575px){
-	.left_arrow{
-		display: none;
-	}
-}
-
 .pop-up1{
     position: fixed;
     height: 100%;
