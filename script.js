@@ -27,6 +27,12 @@ for(let i=0; i<numOfEl; i++)
 //показывает сколько всего будет последовательностей
 input_sequence.textContent = "Входная последовательность " + "(осталось " + numOfEl + "): ";
 
+let popup1 = document.getElementsByClassName("pop-up1")[0];
+let popup2 = document.getElementsByClassName("pop-up2")[0];
+let end_button = document.getElementsByClassName("end_button")[0];
+let bOk1 = document.getElementById("bOk1");
+let bOk2 = document.getElementById("bOk2");
+
 //при нажатии на кнопку отправить ответ
 function retrieveFormValue(event) 
 {
@@ -43,7 +49,8 @@ function retrieveFormValue(event)
 
 	if (valOfseq.value == answer) 
 	{
-		alert("Correct answer");
+		//alert("Correct answer");
+		popup1.style.display = "block";
 
 		numOfseq++; //при правильном ответе идет другая последовательность
 		inputSeq.textContent = CollOfIputSeq[numOfseq];
@@ -62,9 +69,13 @@ function retrieveFormValue(event)
 
 		if (numOfseq == numOfEl) alert("GOOOOOD!!!!");	//Если все ответы правильны
 	}
-	else if (checkForm(form)) alert("Incorrect answer! Try it again.");
+	else if (checkForm(form)) popup2.style.display = "block";
+	//alert("Incorrect answer! Try it again.");
 }
 form.addEventListener("submit", retrieveFormValue);
+bOk1.onclick = function(){popup1.style.display = "none";}
+bOk2.onclick = function(){popup2.style.display = "none";}
+
 
 //-------------------------------------------------------------------------------//
 
