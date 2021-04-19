@@ -19,10 +19,10 @@ inputSeq.textContent = CollOfIputSeq[numOfseq];
 let inputSeqVal = inputSeq.innerHTML;
 
 //показать все ответы
-for(let i=0; i<numOfEl; i++)
+/*for(let i=0; i<numOfEl; i++)
 {
 	console.log(buildAnswer(CollOfIputSeq[i]));
-}
+}*/
 
 //показывает сколько всего будет последовательностей
 input_sequence.textContent = "Входная последовательность " + "(осталось " + numOfEl + "): ";
@@ -81,27 +81,27 @@ bOk2.onclick = function(){popup2.style.display = "none";}
 
 //функция построения ответа
 function buildAnswer(inputSeqVal) {
-  let readyAns = "";
-  let state = 1;
-  let sumOfinputChar = tbody.children.length - 1;
+	let readyAns = "";
+	let state = 1;
+	let sumOfinputChar = tbody.children.length - 1;
 
-  //объект, содержаий в себе ключ-значение входного символа и его номера
-  let symbolID = {};
-  for (let i = 0; i < sumOfinputChar; i++) {
-    symbolID[String.fromCharCode(97 + i)] = i + 1;
-  }
+	//объект, содержащий в себе ключ-значение входного символа и его номера
+	let symbolID = {};
+	for (let i = 0; i < sumOfinputChar; i++) {
+		symbolID[String.fromCharCode(97 + i)] = i + 1;
+	}
 
-  //проход по входной последовательности
-  for (let i = 0; i < inputSeqVal.length; i++) {
-    //читаю значение ячейки
-    let val = tbody.children[symbolID[inputSeqVal[i]]].children[state].innerHTML;
-    //сохраняю следуюoие состояние
-    state = val[0];
-    //формирую ответ
-    readyAns += val[2];
-  }
+	//проход по входной последовательности
+	for (let i = 0; i < inputSeqVal.length; i++) {
+		//читаю значение ячейки
+		let val = tbody.children[symbolID[inputSeqVal[i]]].children[state].innerHTML;
+		//сохраняю следующие состояние
+		state = val[0];
+		//формирую ответ
+		readyAns += val[2];
+	}
 
-  return readyAns;
+	return readyAns;
 }
 
 //функция проверки формы на корректность 
