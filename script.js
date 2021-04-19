@@ -67,7 +67,7 @@ function retrieveFormValue(event)
 		let valInputSeq = document.getElementsByClassName("valueOfsequence")[0];
 		valInputSeq.value = "";
 
-		if (numOfseq == numOfEl) alert("GOOOOOD!!!!");	//Если все ответы правильны
+		if (numOfseq == numOfEl) alert("GOOD!");	//Если все ответы правильны
 	}
 	else if (checkForm(form)) popup2.style.display = "block";
 	//alert("Incorrect answer! Try it again.");
