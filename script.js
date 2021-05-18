@@ -18,12 +18,6 @@ let numOfseq=0;	//индекс, ходящий по последовательн
 inputSeq.textContent = CollOfIputSeq[numOfseq];
 let inputSeqVal = inputSeq.innerHTML;
 
-//показать все ответы
-/*for(let i=0; i<numOfEl; i++)
-{
-	console.log(buildAnswer(CollOfIputSeq[i]));
-}*/
-
 //показывает сколько всего будет последовательностей
 input_sequence.textContent = "Входная последовательность " + "(осталось " + numOfEl + "): ";
 
